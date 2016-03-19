@@ -1,0 +1,45 @@
+{
+  "ProjectName": "Locations",
+  "ProjectGuid": "77a0039c-b27d-4d15-86cd-c42767086934",
+  "projectVersion": 1,
+  "AppIdentifier": "com.telerik.Locations",
+  "DisplayName": "Locations",
+  "Author": "",
+  "Description": "Locations",
+  "BundleVersion": "1.0",
+  "AndroidVersionCode": "1",
+  "iOSDeviceFamily": [
+    "1",
+    "2"
+  ],
+  "iOSBackgroundMode": [],
+  "ProjectTypeGuids": "{070BCB52-5A75-4F8C-A973-144AF0EAFCC9}",
+  "FrameworkVersion": "3.7.0",
+  "AndroidPermissions": [
+    "android.permission.INTERNET"
+  ],
+  "DeviceOrientations": [
+    "Portrait",
+    "Landscape"
+  ],
+  "AndroidHardwareAcceleration": "false",
+  "iOSStatusBarStyle": "Default",
+  "Framework": "Cordova",
+  "WP8TileTitle": "",
+  "WP8Publisher": "",
+  "WP8Capabilities": [
+    "ID_CAP_NETWORKING",
+    "ID_CAP_WEBBROWSERCOMPONENT"
+  ],
+  "WP8Requirements": [],
+  "WP8PublisherID": "{431ea10e-d69d-40e6-acd1-14f845ec5fbc}",
+  "WP8ProductID": "{3759d4cb-8e32-4b51-89fc-8a75548ce57a}",
+  "WPSdk": "8.0",
+  "WP8PackageIdentityName": "1234Telerik.Locations",
+  "WP8WindowsPublisherName": "CN=Telerik",
+  "WP8SupportedResolutions": [
+    "ID_RESOLUTION_WVGA",
+    "ID_RESOLUTION_WXGA",
+    "ID_RESOLUTION_HD720P"
+  ]
+}
