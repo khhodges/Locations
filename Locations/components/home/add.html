@@ -1,0 +1,40 @@
+<div data-role="view" data-title="Add" data-model="app.home.addItemViewModel" data-bind="events: { show: onShow }" id="homeModelAddItemView">
+    <header data-role="header">
+        <div data-role="navbar" class="header-text">
+            <span style="overflow: hidden; white-space: nowrap; text-overflow: ellipsis; text-align: center; display: block; margin-left: 70px; margin-right: 70px;" data-role="view-title"></span>
+            <a data-role="backbutton" data-align="left">Cancel</a>
+            <a data-role="button" data-align="right" data-bind="events: { click: onSaveClick }">Save</a>
+        </div>
+    </header>
+    <!-- START_CUSTOM_CODE_homeModel -->
+    <!-- END_CUSTOM_CODE_homeModel -->
+    <div id="editableListForm7" class="form-view">
+        <form>
+            <ul class="form-content" data-role="listview" data-style="inset">
+                <li>
+
+                    <label><span>Place</span>
+                        <input id="place" data-bind="value: addFormData.place" placeholder="Place Name" type="text">
+                    </label>
+
+                </li>
+                <li>
+
+                    <label><span>Phone</span>
+                        <input id="tel" data-bind="value: addFormData.tel" placeholder="+123 444 555 666" type="tel">
+                    </label>
+
+                </li>
+                <li>
+
+
+                    <p id="comments">Description</p>
+
+
+                </li>
+            </ul>
+        </form>
+        <!-- START_CUSTOM_CODE_editableListForm7 -->
+        <!-- END_CUSTOM_CODE_editableListForm7 -->
+    </div>
+</div>

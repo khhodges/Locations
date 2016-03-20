@@ -4,16 +4,102 @@
     {
       "type": "kendo-ui-mobile:view",
       "name": "home",
-      "components": [],
+      "components": [
+        {
+          "type": "kendo-ui-mobile:editableList",
+          "listExtraFields": [],
+          "detailExtraFields": [],
+          "components": [
+            {
+              "type": "kendo-ui-mobile:editableListForm",
+              "components": [
+                {
+                  "type": "kendo-ui-mobile:editableListFormField",
+                  "name": "longText",
+                  "title": "Long text",
+                  "inputType": "longText",
+                  "dataBindingOptional": "Website"
+                },
+                {
+                  "type": "kendo-ui-mobile:editableListFormField",
+                  "name": "website",
+                  "title": "Long text",
+                  "inputType": "longText",
+                  "dataBindingOptional": "Website"
+                }
+              ],
+              "name": "editableListForm5",
+              "formType": "detail"
+            },
+            {
+              "type": "kendo-ui-mobile:editableListForm",
+              "components": [
+                {
+                  "type": "kendo-ui-mobile:editableListFormField",
+                  "name": "place",
+                  "title": "Place",
+                  "inputType": "text",
+                  "placeholder": "Place Name",
+                  "dataBinding": "Place"
+                },
+                {
+                  "type": "kendo-ui-mobile:editableListFormField",
+                  "name": "tel",
+                  "title": "Phone",
+                  "inputType": "tel",
+                  "placeholder": "+123 444 555 666",
+                  "dataBinding": "Image"
+                },
+                {
+                  "type": "kendo-ui-mobile:editableListFormField",
+                  "name": "comments",
+                  "title": "Long text",
+                  "inputType": "longText",
+                  "value": "Description"
+                }
+              ],
+              "name": "editableListForm7",
+              "formType": "add"
+            }
+          ],
+          "name": "homeModel",
+          "dataProvider": "defender",
+          "collection": "Places",
+          "headerField": "Place",
+          "iconField": true,
+          "imageField": "Image",
+          "subHeaderField": "Phone",
+          "pullToRefresh": true,
+          "endlessScroll": false,
+          "deleteItemButton": false,
+          "detailHeaderField": "Place",
+          "detailSubHeaderField": "Phone",
+          "detailDescriptionField": "Description",
+          "detailImageField": "Image",
+          "addItemForm": true,
+          "editItemForm": false
+        }
+      ],
       "title": "Home View",
-      "addToNavigation": true,
-      "icon": "home"
+      "addToNavigation": false
     }
   ],
-  "dataProviders": [],
+  "dataProviders": [
+    {
+      "type": "kendo-ui-mobile:dataProvider",
+      "name": "defender",
+      "title": "Defender / Defender",
+      "source": "everlive",
+      "everliveKey": "3t5oa8il0d0y02eq",
+      "offlineStorage": true
+    }
+  ],
   "name": "kendoUiMobileApp",
   "navigation": "tabstrip",
   "view": "home",
   "transition": "slide",
-  "skin": "flat"
+  "skin": "nova",
+  "skinActive": "#ff4350",
+  "skinText": "#32364c",
+  "skinSecondary": "#888e90"
 }
