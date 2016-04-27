@@ -15,17 +15,17 @@
               "components": [
                 {
                   "type": "kendo-ui-mobile:editableListFormField",
-                  "name": "longText",
+                  "name": "website",
                   "title": "Long text",
                   "inputType": "longText",
                   "dataBindingOptional": "Website"
                 },
                 {
                   "type": "kendo-ui-mobile:editableListFormField",
-                  "name": "website",
+                  "name": "longText",
                   "title": "Long text",
                   "inputType": "longText",
-                  "dataBindingOptional": "Website"
+                  "dataBindingOptional": "Phone"
                 }
               ],
               "name": "editableListForm5",
@@ -37,9 +37,10 @@
                 {
                   "type": "kendo-ui-mobile:editableListFormField",
                   "name": "place",
-                  "title": "Place",
+                  "title": "Name",
                   "inputType": "text",
-                  "placeholder": "Place Name",
+                  "titlePosition": "left",
+                  "placeholder": "Business Name",
                   "dataBinding": "Place"
                 },
                 {
@@ -47,37 +48,51 @@
                   "name": "tel",
                   "title": "Phone",
                   "inputType": "tel",
+                  "titlePosition": "left",
                   "placeholder": "+123 444 555 666",
-                  "dataBinding": "Image"
+                  "dataBinding": "Phone"
                 },
                 {
                   "type": "kendo-ui-mobile:editableListFormField",
-                  "name": "comments",
-                  "title": "Long text",
-                  "inputType": "longText",
-                  "value": "Description"
+                  "name": "www",
+                  "title": "url",
+                  "inputType": "url",
+                  "titlePosition": "left",
+                  "placeholder": "http://www.example.com",
+                  "dataBinding": "Website"
                 }
               ],
               "name": "editableListForm7",
               "formType": "add"
+            },
+            {
+              "type": "kendo-ui-mobile:editableListForm",
+              "components": [],
+              "name": "editableListForm21",
+              "formType": "edit"
             }
           ],
           "name": "homeModel",
           "dataProvider": "defender",
           "collection": "Places",
           "headerField": "Place",
-          "iconField": true,
+          "iconField": false,
           "imageField": "Image",
-          "subHeaderField": "Phone",
+          "subHeaderField": "Address",
+          "filterField": "Place",
           "pullToRefresh": true,
           "endlessScroll": false,
           "deleteItemButton": false,
+          "detailHeaderFieldSource": "dataBound",
           "detailHeaderField": "Place",
-          "detailSubHeaderField": "Phone",
+          "detailSubHeaderField": "Address",
           "detailDescriptionField": "Description",
           "detailImageField": "Image",
           "addItemForm": true,
-          "editItemForm": false
+          "addScreenHeaderValue": "Create",
+          "editItemForm": true,
+          "editScreenHeaderSource": "static",
+          "editScreenHeaderValue": "Edit"
         }
       ],
       "title": "Home View",
@@ -98,8 +113,6 @@
   "navigation": "tabstrip",
   "view": "home",
   "transition": "slide",
-  "skin": "nova",
-  "skinActive": "#ff4350",
-  "skinText": "#32364c",
-  "skinSecondary": "#888e90"
+  "showMoreTab": false,
+  "skin": "native"
 }

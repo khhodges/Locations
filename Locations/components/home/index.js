@@ -91,18 +91,14 @@ app.home = kendo.observable({
                             field: 'Place',
                             defaultValue: ''
                         },
-                        'Phone': {
-                            field: 'Phone',
+                        'Address': {
+                            field: 'Address',
                             defaultValue: ''
                         },
                         'Image': {
                             field: 'Image',
                             defaultValue: ''
                         },
-                    },
-                    icon: function() {
-                        var i = 'globe';
-                        return kendo.format('km-icon km-{0}', i);
                     }
                 }
             },
@@ -111,6 +107,19 @@ app.home = kendo.observable({
         dataSource = new kendo.data.DataSource(dataSourceOptions),
         homeModel = kendo.observable({
             dataSource: dataSource,
+            searchChange: function(e) {
+                var searchVal = e.target.value,
+                    searchFilter;
+
+                if (searchVal) {
+                    searchFilter = {
+                        field: 'Place',
+                        operator: 'contains',
+                        value: searchVal
+                    };
+                }
+                fetchFilteredData(homeModel.get('paramFilter'), searchFilter);
+            },
             itemClick: function(e) {
 
                 app.mobileApp.navigate('#components/home/details.html?uid=' + e.dataItem.uid);
@@ -118,6 +127,10 @@ app.home = kendo.observable({
             },
             addClick: function() {
                 app.mobileApp.navigate('#components/home/add.html');
+            },
+            editClick: function() {
+                var uid = this.currentItem.uid;
+                app.mobileApp.navigate('#components/home/edit.html?uid=' + uid);
             },
             detailsShow: function(e) {
                 var item = e.view.params.uid,
@@ -139,6 +152,7 @@ app.home = kendo.observable({
         onShow: function(e) {
             // Reset the form data.
             this.set('addFormData', {
+                www: '',
                 tel: '',
                 place: '',
             });
@@ -148,12 +162,41 @@ app.home = kendo.observable({
                 dataSource = homeModel.get('dataSource');
 
             dataSource.add({
-                Image: addFormData.tel,
+                Website: addFormData.www,
+                Phone: addFormData.tel,
                 Place: addFormData.place,
             });
 
             dataSource.one('change', function(e) {
                 app.mobileApp.navigate('#:back');
+            });
+
+            dataSource.sync();
+        }
+    }));
+
+    parent.set('editItemViewModel', kendo.observable({
+        onShow: function(e) {
+            var itemUid = e.view.params.uid,
+                dataSource = homeModel.get('dataSource'),
+                itemData = dataSource.getByUid(itemUid);
+
+            this.set('itemData', itemData);
+            this.set('editFormData', {});
+        },
+        onSaveClick: function(e) {
+            var editFormData = this.get('editFormData'),
+                itemData = this.get('itemData'),
+                dataSource = homeModel.get('dataSource');
+
+            // prepare edit
+
+            dataSource.one('sync', function(e) {
+                app.mobileApp.navigate('#:back');
+            });
+
+            dataSource.one('error', function() {
+                dataSource.cancelChanges(itemData);
             });
 
             dataSource.sync();

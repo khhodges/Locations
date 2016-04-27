@@ -11,25 +11,34 @@
     <div id="editableListForm7" class="form-view">
         <form>
             <ul class="form-content" data-role="listview" data-style="inset">
-                <li>
+                <li class="form-content-item">
 
-                    <label><span>Place</span>
-                        <input id="place" data-bind="value: addFormData.place" placeholder="Place Name" type="text">
+                    <label>
+
+                        <span>Name</span>
+
+                        <input id="place" data-bind="value: addFormData.place" placeholder="Business Name" type="text">
                     </label>
 
                 </li>
-                <li>
+                <li class="form-content-item">
 
-                    <label><span>Phone</span>
+                    <label>
+
+                        <span>Phone</span>
+
                         <input id="tel" data-bind="value: addFormData.tel" placeholder="+123 444 555 666" type="tel">
                     </label>
 
                 </li>
-                <li>
+                <li class="form-content-item">
 
+                    <label>
 
-                    <p id="comments">Description</p>
+                        <span>url</span>
 
+                        <input id="www" data-bind="value: addFormData.www" placeholder="http://www.example.com" type="url">
+                    </label>
 
                 </li>
             </ul>

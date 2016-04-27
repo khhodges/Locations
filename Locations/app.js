@@ -9,7 +9,6 @@
         $(function() {
             app.mobileApp = new kendo.mobile.Application(document.body, {
                 transition: 'slide',
-                skin: 'nova',
                 initial: 'components/home/view.html'
             });
         });
@@ -28,7 +27,7 @@
 
     app.keepActiveState = function _keepActiveState(item) {
         var currentItem = item;
-        $('#navigation-container li a.active').removeClass('active');
+        $('#navigation-container li.active').removeClass('active');
         currentItem.addClass('active');
     };
 

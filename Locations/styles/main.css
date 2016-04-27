@@ -56,10 +56,6 @@
     content: '\e077';
 }
 
-#kendoUiMobileApp.km-flat .km-drawer .km-content {
-    background-color: #fcfcfc;
-}
-
 #kendoUiMobileApp form .form-content li p {
     margin: 0;
     padding: 0;
@@ -95,40 +91,9 @@
     margin-top: 0.5em;
 }
 
-#kendoUiMobileApp #navigation-container.km-tabstrip .km-button {
-    vertical-align: top;
-}
-
 #kendoUiMobileApp #navigation-container.km-tabstrip .km-button .km-text {
     max-width: 100%;
     word-wrap: break-word;
-}
-
-#kendoUiMobileApp #navigation-container .active {
-    background: #10c4b2;
-    color: #fff;
-}
-
-#kendoUiMobileApp #navigation-container .active:after {
-    color: #fff;
-}
-
-#kendoUiMobileApp.km-nova #navigation-container.km-tabstrip .km-button {
-    vertical-align: middle;
-}
-
-#kendoUiMobileApp.km-nova p {
-    margin-left: 1rem;
-    margin-right: 1rem;
-}
-
-#kendoUiMobileApp.km-nova span.km-switch {
-    color: #ff4350;
-}
-
-#kendoUiMobileApp.km-nova span.km-switch.km-switch-on input[type=checkbox]:checked + span + span {
-    border-color: #ff4350;
-    background-color: #ff4350;
 }
 
 #kendoUiMobileApp .unsupported-preview {
@@ -153,7 +118,8 @@
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-#kendoUiMobileApp .km-content .details-content p {
+#kendoUiMobileApp .km-content .details-content p,
+#kendoUiMobileApp.km-nova .km-content .details-content h3 {
     padding: 1rem;
     margin: 0;
 }
@@ -170,7 +136,7 @@
 #kendoUiMobileApp .editableListItem > span {
     display: inline-block;
     word-break: break-word;
-    width: 30%;
+    width: 50%;
     padding-right: 10px;
 }
 
@@ -184,47 +150,6 @@
     width: 100%;
 }
 
-#kendoUiMobileApp.km-nova .details-content {
-    font-size: 1.2em;
-}
-
-#kendoUiMobileApp .km-list label:not(.km-label-above) input[type="password"],
-#kendoUiMobileApp .km-list label:not(.km-label-above) input[type="search"],
-#kendoUiMobileApp .km-list label:not(.km-label-above) input[type="number"],
-#kendoUiMobileApp .km-list label:not(.km-label-above) input[type="tel"],
-#kendoUiMobileApp .km-list label:not(.km-label-above) input[type="url"],
-#kendoUiMobileApp .km-list label:not(.km-label-above) input[type="email"],
-#kendoUiMobileApp .km-list label:not(.km-label-above) input[type="month"],
-#kendoUiMobileApp .km-list label:not(.km-label-above) input[type="color"],
-#kendoUiMobileApp .km-list label:not(.km-label-above) input[type="week"],
-#kendoUiMobileApp .km-list label:not(.km-label-above) input[type="date"],
-#kendoUiMobileApp .km-list label:not(.km-label-above) input[type="time"],
-#kendoUiMobileApp .km-list label:not(.km-label-above) input[type="datetime"],
-#kendoUiMobileApp .km-list label:not(.km-label-above) input[type="datetime-local"],
-#kendoUiMobileApp .km-list label:not(.km-label-above) input[type="text"]:not(.k-input),
-#kendoUiMobileApp .km-list select:not([multiple]),
-#kendoUiMobileApp .km-list label:not(.km-label-above) .k-dropdown-wrap,
-#kendoUiMobileApp .km-list label:not(.km-label-above) textarea,
-#kendoUiMobileApp .editableListItem > span:last-child {
-    min-width: 70%;
-}
-
-
-/* primary buttons */
-
-#kendoUiMobileApp.km-flat .button-group .km-button.primary {
-    background-color: #ff4350;
-}
-
-#kendoUiMobileApp.km-nova .button-group .km-button.primary {
-    background-color: #ff4350;
-    border-color: #ff4350;
-}
-
-#kendoUiMobileApp.km-flat .button-group .km-button.primary {
-    color: #888e90;
-}
-
 #kendoUiMobileApp.km-ios7 .button-group .km-button.primary {
     color: #fff;
     background-color: #007aff;
@@ -233,68 +158,6 @@
 #kendoUiMobileApp.km-android .button-group .km-button.primary {
     color: #fff;
     background-color: #33b5e5;
-}
-
-
-/* buttons */
-
-#kendoUiMobileApp.km-nova .button-group .km-button.primary,
-#kendoUiMobileApp.km-nova .km-button.km-state-active {
-    color: #fff;
-}
-
-
-/* form label position */
-
-#kendoUiMobileApp.km-flat .form-content .form-content-item .km-label-above {
-    font-size: 0.8em;
-}
-
-#kendoUiMobileApp.km-flat .form-content .form-content-item .km-label-above input:not([type='checkbox']):not([type='radio']),
-#kendoUiMobileApp.km-flat .form-content .form-content-item .km-label-above select:not([multiple]),
-#kendoUiMobileApp.km-flat .form-content .form-content-item .km-label-hidden input:not([type='checkbox']):not([type='radio']),
-#kendoUiMobileApp.km-flat .form-content .form-content-item .km-label-hidden select:not([multiple]) {
-    width: 100%;
-    position: static;
-    margin-left: -0.4rem;
-    margin-right: -0.4rem;
-}
-
-#kendoUiMobileApp.km-flat .form-content .form-content-item .km-label-hidden input:not([type='checkbox']):not([type='radio']),
-#kendoUiMobileApp.km-flat .form-content .form-content-item .km-label-hidden select:not([multiple]) {
-    position: absolute;
-}
-
-#kendoUiMobileApp.km-nova .form-content .form-content-item .km-label-hidden input:not(.k-input):not([type='checkbox']):not([type='radio']),
-#kendoUiMobileApp.km-nova .form-content .form-content-item .km-label-hidden select:not([multiple]) {
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
-    -webkit-transform: translateY(-50%);
-}
-
-#kendoUiMobileApp.km-nova .form-content .form-content-item .km-listview-label.km-label-above {
-    width: auto;
-}
-
-
-/* custom filter */
-
-#kendoUiMobileApp.km-flat .custom-filter input {
-    font-size: 1.2em;
-    padding: .3em 0 .3em 1.8em;
-}
-
-#kendoUiMobileApp.km-flat .km-filter-wrap:before {
-    position: absolute;
-    top: .25em;
-}
-
-#kendoUiMobileApp.km-nova .custom-filter input {
-    padding: .5em 0 .5em 1.8em;
-}
-
-#kendoUiMobileApp.km-nova .km-filter-wrap:before {
-    color: #cacdce;
 }
 
 
