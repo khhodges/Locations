@@ -147,7 +147,49 @@
         }
       ],
       "title": "Business List",
-      "addToNavigation": false
+      "addToNavigation": true,
+      "icon": "globe"
+    },
+    {
+      "type": "kendo-ui-mobile:view",
+      "name": "notifications",
+      "components": [
+        {
+          "type": "kendo-ui-mobile:editableList",
+          "listExtraFields": [],
+          "detailExtraFields": [],
+          "components": [
+            {
+              "type": "kendo-ui-mobile:editableListForm",
+              "components": [
+                {
+                  "type": "kendo-ui-mobile:editableListFormField",
+                  "name": "status",
+                  "title": "Short text",
+                  "inputType": "shortText",
+                  "dataBindingOptional": "Status"
+                }
+              ],
+              "name": "editableListForm44",
+              "formType": "list"
+            }
+          ],
+          "name": "notificationsModel",
+          "dataProvider": "defender",
+          "collection": "Notifications",
+          "headerField": "Reference",
+          "pullToRefresh": true,
+          "endlessScroll": false,
+          "deleteItemButton": false,
+          "detailHeaderFieldSource": "static",
+          "detailHeaderFieldValue": "Detail",
+          "addItemForm": false,
+          "editItemForm": false
+        }
+      ],
+      "title": "Notifications",
+      "addToNavigation": true,
+      "icon": "action"
     }
   ],
   "dataProviders": [
@@ -161,9 +203,7 @@
     }
   ],
   "name": "kendoUiMobileApp",
-  "navigation": "tabstrip",
+  "navigation": "drawer",
   "view": "home",
-  "transition": "slide",
-  "showMoreTab": false,
   "skin": "native"
 }

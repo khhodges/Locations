@@ -1,0 +1,20 @@
+<div data-role="view" data-title="Notifications" data-layout="main" data-model="app.notifications" data-show="app.notifications.onShow" data-after-show="app.notifications.afterShow">
+
+    <!-- START_CUSTOM_CODE_notifications -->
+    <!-- Add custom code here. For more information about custom code, see http://docs.telerik.com/platform/screenbuilder/troubleshooting/how-to-keep-custom-code-changes -->
+
+    <!-- END_CUSTOM_CODE_notifications -->
+    <ul data-role="listview" data-auto-bind="false" data-style="inset" data-template="notificationsModelTemplate" data-bind="{ source: notificationsModel.dataSource, events: {click: notificationsModel.itemClick} }" data-pull-to-refresh="true" data-endless-scroll="false">
+    </ul>
+    <!-- START_CUSTOM_CODE_notificationsModel -->
+    <!-- Add custom code here. For more information about custom code, see http://docs.telerik.com/platform/screenbuilder/troubleshooting/how-to-keep-custom-code-changes -->
+
+    <!-- END_CUSTOM_CODE_notificationsModel -->
+    <script type="text/x-kendo-template" id="notificationsModelTemplate">
+        <div class="image-with-text">
+            <h3>#: data['Reference'] #</h3>
+
+        </div>
+        <p class="editableListItem"><span>Short text</span><span>#: data['Status'] #</span></p>
+    </script>
+</div>
