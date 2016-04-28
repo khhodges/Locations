@@ -190,6 +190,32 @@
       "title": "Notifications",
       "addToNavigation": true,
       "icon": "action"
+    },
+    {
+      "type": "kendo-ui-mobile:view",
+      "name": "aboutView",
+      "components": [
+        {
+          "type": "kendo-ui-mobile:about",
+          "name": "aboutViewModel",
+          "appName": "On2T Community Services",
+          "appVersion": "Version 1",
+          "appIcon": "icon.png",
+          "appDescription": "App description",
+          "contactButton": true,
+          "contactLabel": "Contact us",
+          "contactMail": "support@on2t.com",
+          "facebookButton": true,
+          "facebookLabel": "Like us on Facebook",
+          "facebookLink": "https://www.facebook.com/on2t",
+          "twitterButton": true,
+          "twitterLabel": "Follow us on Twitter",
+          "twitterLink": "https://twitter.com/on2t"
+        }
+      ],
+      "title": "About",
+      "addToNavigation": true,
+      "icon": "info"
     }
   ],
   "dataProviders": [

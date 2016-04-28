@@ -1,0 +1,33 @@
+<div data-role="view" data-title="About" data-layout="main" data-model="app.aboutView" data-show="app.aboutView.onShow" data-after-show="app.aboutView.afterShow">
+    <div class="about-view" data-bind="invisible:error">
+        <div class="icon-group">
+
+            <div class="app-icon">
+                <img src="resources/icon.png">
+            </div>
+
+
+            <div class="app-details">
+                <h2>On2T Community Services</h2>
+                <h4>Version 1</h4>
+            </div>
+        </div>
+
+        <p>App description</p>
+
+        <div class="button-group button-group-vertical">
+            <a data-role="button" data-rel="external" href="mailto:support@on2t.com">Contact us</a>
+            <a data-role="button" data-rel="external" href="#" onclick="app.aboutView.aboutViewModel.openLink('https://www.facebook.com/on2t');">Like us on Facebook</a>
+            <a data-role="button" data-rel="external" href="#" onclick="app.aboutView.aboutViewModel.openLink('https://twitter.com/on2t');">Follow us on Twitter</a>
+        </div>
+        <!-- START_CUSTOM_CODE_aboutViewModel -->
+        <!-- Add custom code here. For more information about custom code, see http://docs.telerik.com/platform/screenbuilder/troubleshooting/how-to-keep-custom-code-changes -->
+
+        <!-- END_CUSTOM_CODE_aboutViewModel -->
+    </div>
+
+    <!-- START_CUSTOM_CODE_aboutView -->
+    <!-- Add custom code here. For more information about custom code, see http://docs.telerik.com/platform/screenbuilder/troubleshooting/how-to-keep-custom-code-changes -->
+
+    <!-- END_CUSTOM_CODE_aboutView -->
+</div>
