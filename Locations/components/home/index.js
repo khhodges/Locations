@@ -128,10 +128,6 @@ app.home = kendo.observable({
             addClick: function() {
                 app.mobileApp.navigate('#components/home/add.html');
             },
-            editClick: function() {
-                var uid = this.currentItem.uid;
-                app.mobileApp.navigate('#components/home/edit.html?uid=' + uid);
-            },
             detailsShow: function(e) {
                 var item = e.view.params.uid,
                     dataSource = homeModel.get('dataSource'),
@@ -152,6 +148,11 @@ app.home = kendo.observable({
         onShow: function(e) {
             // Reset the form data.
             this.set('addFormData', {
+                email: '',
+                html: '',
+                icon: '',
+                textField: '',
+                address: '',
                 www: '',
                 tel: '',
                 place: '',
@@ -162,6 +163,11 @@ app.home = kendo.observable({
                 dataSource = homeModel.get('dataSource');
 
             dataSource.add({
+                Email: addFormData.email,
+                Html: addFormData.html,
+                Icon: addFormData.icon,
+                Description: addFormData.textField,
+                Address: addFormData.address,
                 Website: addFormData.www,
                 Phone: addFormData.tel,
                 Place: addFormData.place,
@@ -169,34 +175,6 @@ app.home = kendo.observable({
 
             dataSource.one('change', function(e) {
                 app.mobileApp.navigate('#:back');
-            });
-
-            dataSource.sync();
-        }
-    }));
-
-    parent.set('editItemViewModel', kendo.observable({
-        onShow: function(e) {
-            var itemUid = e.view.params.uid,
-                dataSource = homeModel.get('dataSource'),
-                itemData = dataSource.getByUid(itemUid);
-
-            this.set('itemData', itemData);
-            this.set('editFormData', {});
-        },
-        onSaveClick: function(e) {
-            var editFormData = this.get('editFormData'),
-                itemData = this.get('itemData'),
-                dataSource = homeModel.get('dataSource');
-
-            // prepare edit
-
-            dataSource.one('sync', function(e) {
-                app.mobileApp.navigate('#:back');
-            });
-
-            dataSource.one('error', function() {
-                dataSource.cancelChanges(itemData);
             });
 
             dataSource.sync();

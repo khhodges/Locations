@@ -26,6 +26,20 @@
                   "title": "Long text",
                   "inputType": "longText",
                   "dataBindingOptional": "Phone"
+                },
+                {
+                  "type": "kendo-ui-mobile:editableListFormField",
+                  "name": "shortText",
+                  "title": "Email",
+                  "inputType": "shortText",
+                  "dataBindingOptional": "Email"
+                },
+                {
+                  "type": "kendo-ui-mobile:editableListFormField",
+                  "name": "shortText1",
+                  "title": "Short text",
+                  "inputType": "shortText",
+                  "dataBindingOptional": "Location"
                 }
               ],
               "name": "editableListForm5",
@@ -60,16 +74,55 @@
                   "titlePosition": "left",
                   "placeholder": "http://www.example.com",
                   "dataBinding": "Website"
+                },
+                {
+                  "type": "kendo-ui-mobile:editableListFormField",
+                  "name": "address",
+                  "title": "Address",
+                  "inputType": "text",
+                  "titlePosition": "left",
+                  "placeholder": "Type here ...",
+                  "dataBinding": "Address"
+                },
+                {
+                  "type": "kendo-ui-mobile:editableListFormField",
+                  "name": "textField",
+                  "title": "Text field",
+                  "inputType": "text",
+                  "titlePosition": "left",
+                  "placeholder": "Summary  ...",
+                  "dataBinding": "Description"
+                },
+                {
+                  "type": "kendo-ui-mobile:editableListFormField",
+                  "name": "icon",
+                  "title": "Icon",
+                  "inputType": "url",
+                  "titlePosition": "left",
+                  "placeholder": "http://www.example.com",
+                  "dataBinding": "Icon"
+                },
+                {
+                  "type": "kendo-ui-mobile:editableListFormField",
+                  "name": "html",
+                  "title": "Html",
+                  "inputType": "text",
+                  "titlePosition": "left",
+                  "placeholder": "Type here ...",
+                  "dataBinding": "Html"
+                },
+                {
+                  "type": "kendo-ui-mobile:editableListFormField",
+                  "name": "email",
+                  "title": "Email",
+                  "inputType": "email",
+                  "titlePosition": "left",
+                  "placeholder": "example@example.com",
+                  "dataBinding": "Email"
                 }
               ],
               "name": "editableListForm7",
               "formType": "add"
-            },
-            {
-              "type": "kendo-ui-mobile:editableListForm",
-              "components": [],
-              "name": "editableListForm21",
-              "formType": "edit"
             }
           ],
           "name": "homeModel",
@@ -90,12 +143,10 @@
           "detailImageField": "Image",
           "addItemForm": true,
           "addScreenHeaderValue": "Create",
-          "editItemForm": true,
-          "editScreenHeaderSource": "static",
-          "editScreenHeaderValue": "Edit"
+          "editItemForm": false
         }
       ],
-      "title": "Home View",
+      "title": "Business List",
       "addToNavigation": false
     }
   ],
