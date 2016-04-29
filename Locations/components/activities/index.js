@@ -68,6 +68,9 @@ app.activities = kendo.observable({
                 typeName: 'Activities',
                 dataProvider: dataProvider
             },
+            group: {
+                field: 'Text'
+            },
             change: function(e) {
                 var data = this.data();
                 for (var i = 0; i < data.length; i++) {
@@ -103,9 +106,6 @@ app.activities = kendo.observable({
                 }
             },
             serverFiltering: true,
-            serverSorting: true,
-            serverPaging: true,
-            pageSize: 50
         },
         dataSource = new kendo.data.DataSource(dataSourceOptions),
         activitiesModel = kendo.observable({
