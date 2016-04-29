@@ -40,6 +40,13 @@
                   "title": "Short text",
                   "inputType": "shortText",
                   "dataBindingOptional": "Location"
+                },
+                {
+                  "type": "kendo-ui-mobile:editableListFormField",
+                  "name": "address",
+                  "title": "Address",
+                  "inputType": "shortText",
+                  "dataBindingOptional": "Address"
                 }
               ],
               "name": "editableListForm5",
@@ -136,9 +143,9 @@
           "pullToRefresh": true,
           "endlessScroll": false,
           "deleteItemButton": false,
-          "detailHeaderFieldSource": "dataBound",
-          "detailHeaderField": "Place",
-          "detailSubHeaderField": "Address",
+          "detailHeaderFieldSource": "static",
+          "detailHeaderFieldValue": "Detail",
+          "detailSubHeaderField": "Place",
           "detailDescriptionField": "Description",
           "detailImageField": "Image",
           "addItemForm": true,
@@ -158,22 +165,7 @@
           "type": "kendo-ui-mobile:editableList",
           "listExtraFields": [],
           "detailExtraFields": [],
-          "components": [
-            {
-              "type": "kendo-ui-mobile:editableListForm",
-              "components": [
-                {
-                  "type": "kendo-ui-mobile:editableListFormField",
-                  "name": "status",
-                  "title": "Short text",
-                  "inputType": "shortText",
-                  "dataBindingOptional": "Status"
-                }
-              ],
-              "name": "editableListForm44",
-              "formType": "list"
-            }
-          ],
+          "components": [],
           "name": "notificationsModel",
           "dataProvider": "defender",
           "collection": "Notifications",
@@ -216,6 +208,50 @@
       "title": "About",
       "addToNavigation": true,
       "icon": "info"
+    },
+    {
+      "type": "kendo-ui-mobile:view",
+      "name": "activities",
+      "components": [
+        {
+          "type": "kendo-ui-mobile:editableList",
+          "listExtraFields": [],
+          "detailExtraFields": [],
+          "components": [
+            {
+              "type": "kendo-ui-mobile:editableListForm",
+              "components": [],
+              "name": "editableListForm16",
+              "formType": "add"
+            }
+          ],
+          "name": "activitiesModel",
+          "dataProvider": "defender",
+          "collection": "Activities",
+          "headerField": "UserId",
+          "iconField": true,
+          "imageField": "Picture",
+          "subHeaderField": "Text",
+          "filterField": "Text",
+          "pullToRefresh": true,
+          "endlessScroll": true,
+          "deleteItemButton": false,
+          "detailHeaderFieldSource": "static",
+          "detailHeaderFieldValue": "Detail",
+          "detailSubHeaderField": "Title",
+          "detailDescriptionField": "Text",
+          "detailImageField": "Picture",
+          "addItemForm": true,
+          "addScreenHeaderValue": "Create",
+          "editItemForm": false,
+          "itemActionView": "notifications",
+          "itemActionPrimaryKey": "Id",
+          "itemActionSecondaryKey": "Status"
+        }
+      ],
+      "title": "Activities",
+      "addToNavigation": true,
+      "icon": "bookmarks"
     }
   ],
   "dataProviders": [

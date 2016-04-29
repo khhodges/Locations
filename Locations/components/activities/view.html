@@ -1,0 +1,37 @@
+<div data-role="view" data-title="Activities" data-layout="main" data-model="app.activities" data-show="app.activities.onShow" data-after-show="app.activities.afterShow">
+
+    <!-- START_CUSTOM_CODE_activities -->
+    <!-- Add custom code here. For more information about custom code, see http://docs.telerik.com/platform/screenbuilder/troubleshooting/how-to-keep-custom-code-changes -->
+
+    <!-- END_CUSTOM_CODE_activities -->
+    <header data-role="header">
+        <div data-role="navbar" class="header-text">
+
+            <span data-role="view-title" style="overflow: hidden; white-space: nowrap; text-overflow: ellipsis; text-align: center; display: block; margin-left: 70px; margin-right: 70px;"></span>
+
+            <a data-role="button" href="#appDrawer" data-rel="drawer" data-align="left" data-icon="drawer-button"></a>
+
+            <a data-role="button" data-align="right" data-bind="events: { click: activitiesModel.addClick }">Add</a>
+        </div>
+    </header>
+
+    <!--  Certain features like grouping and inset styling are not supported when endless scroll is enabled. -->
+    <form class="km-filter-form custom-filter">
+        <div class="km-filter-wrap">
+            <input type="serach" placeholder="Search..." data-bind="{events:{keyup: activitiesModel.searchChange}}">
+        </div>
+    </form>
+    <ul data-role="listview" data-auto-bind="false" data-style="" data-template="activitiesModelTemplate" data-bind="{ source: activitiesModel.dataSource, events: {click: activitiesModel.itemClick} }" data-pull-to-refresh="true" data-endless-scroll="true">
+    </ul>
+    <!-- START_CUSTOM_CODE_activitiesModel -->
+    <!-- Add custom code here. For more information about custom code, see http://docs.telerik.com/platform/screenbuilder/troubleshooting/how-to-keep-custom-code-changes -->
+
+    <!-- END_CUSTOM_CODE_activitiesModel -->
+    <script type="text/x-kendo-template" id="activitiesModelTemplate">
+        <div class="image-with-text">
+            <img src="#: data['PictureUrl'] #" width="30%" height="30%">
+            <h3><span class="#: data.icon() #"></span>#: data['UserId'] #</h3>
+            <p>#: data['Text'] #</p>
+        </div>
+    </script>
+</div>

@@ -2,17 +2,18 @@
     <header data-role="header">
         <div data-role="navbar" class="header-text">
             <a data-role="backbutton" data-align="left">Back</a>
-            <span data-bind="text: currentItem.Place" style="overflow: hidden; white-space: nowrap; text-overflow: ellipsis; text-align: center; display: block; margin-left: 70px; margin-right: 70px;"></span>
+            <span style="overflow: hidden; white-space: nowrap; text-overflow: ellipsis; text-align: center; display: block; margin-left: 70px; margin-right: 70px;">Detail</span>
         </div>
     </header>
     <div class="details-content">
-        <h3 data-bind="text: currentItem.Address"></h3>
+        <h3 data-bind="text: currentItem.Place"></h3>
         <p data-bind="text: currentItem.Description"></p>
         <img data-bind="attr: { src: currentItem.ImageUrl }" width="100%" height="auto">
         <p data-bind="html: currentItem.Website"></p>
         <p data-bind="html: currentItem.Phone"></p>
         <p class="editableListItem"><span>Email</span><span data-bind="html: currentItem.Email"></span></p>
         <p class="editableListItem"><span>Short text</span><span data-bind="html: currentItem.Location"></span></p>
+        <p class="editableListItem"><span>Address</span><span data-bind="html: currentItem.Address"></span></p>
     </div>
     <!-- START_CUSTOM_CODE_homeModel -->
     <!-- Add custom code here. For more information about custom code, see http://docs.telerik.com/platform/screenbuilder/troubleshooting/how-to-keep-custom-code-changes -->
