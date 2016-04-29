@@ -229,15 +229,51 @@
                   "name": "textField1",
                   "title": "Title",
                   "inputType": "text",
-                  "titlePosition": "left",
+                  "titlePosition": "top",
                   "placeholder": "Type here ...",
                   "dataBinding": "Title"
                 },
                 {
                   "type": "kendo-ui-mobile:editableListFormField",
-                  "name": "subject",
-                  "title": "Long text",
-                  "inputType": "longText"
+                  "name": "textField3",
+                  "title": "Description",
+                  "inputType": "text",
+                  "titlePosition": "top",
+                  "placeholder": "Type here ...",
+                  "dataBinding": "Text"
+                },
+                {
+                  "type": "kendo-ui-mobile:editableListFormField",
+                  "name": "textField2",
+                  "title": "Notes",
+                  "inputType": "text",
+                  "titlePosition": "top",
+                  "placeholder": "Type here ...",
+                  "dataBinding": "Notes"
+                },
+                {
+                  "type": "kendo-ui-mobile:editableListFormField",
+                  "name": "switch",
+                  "title": "Status",
+                  "inputType": "switch",
+                  "dataBinding": "Active"
+                },
+                {
+                  "type": "kendo-ui-mobile:editableListFormField",
+                  "name": "number",
+                  "title": "Price",
+                  "inputType": "number",
+                  "titlePosition": "left",
+                  "dataBinding": "Value"
+                },
+                {
+                  "type": "kendo-ui-mobile:editableListFormField",
+                  "name": "url",
+                  "title": "Picture",
+                  "inputType": "url",
+                  "titlePosition": "top",
+                  "placeholder": "http://www.example.com",
+                  "dataBinding": "Picture"
                 }
               ],
               "name": "editableListForm16",
@@ -247,10 +283,10 @@
           "name": "activitiesModel",
           "dataProvider": "defender",
           "collection": "Activities",
-          "headerField": "Text",
+          "headerField": "Title",
           "iconField": false,
           "imageField": "Picture",
-          "subHeaderField": "Stars",
+          "subHeaderField": "Text",
           "filterField": "Text",
           "group": "Text",
           "pullToRefresh": true,

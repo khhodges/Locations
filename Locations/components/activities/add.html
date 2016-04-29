@@ -13,7 +13,7 @@
             <ul class="form-content" data-role="listview" data-style="inset">
                 <li class="form-content-item">
 
-                    <label>
+                    <label class="km-label-above">
 
                         <span>Title</span>
 
@@ -23,9 +23,52 @@
                 </li>
                 <li class="form-content-item">
 
+                    <label class="km-label-above">
 
-                    <p id="subject" data-bind="text: addFormData.subject"></p>
+                        <span>Description</span>
 
+                        <input id="textField3" data-bind="value: addFormData.textField3" placeholder="Type here ..." type="text">
+                    </label>
+
+                </li>
+                <li class="form-content-item">
+
+                    <label class="km-label-above">
+
+                        <span>Notes</span>
+
+                        <input id="textField2" data-bind="value: addFormData.textField2" placeholder="Type here ..." type="text">
+                    </label>
+
+                </li>
+                <li class="form-content-item">
+
+                    <label>
+
+                        <span>Status</span>
+
+                        <input id="switch" data-bind="value: addFormData.switch" data-role="switch">
+                    </label>
+
+                </li>
+                <li class="form-content-item">
+
+                    <label>
+
+                        <span>Price</span>
+
+                        <input id="number" data-bind="value: addFormData.number" type="number">
+                    </label>
+
+                </li>
+                <li class="form-content-item">
+
+                    <label class="km-label-above">
+
+                        <span>Picture</span>
+
+                        <input id="url" data-bind="value: addFormData.url" placeholder="http://www.example.com" type="url">
+                    </label>
 
                 </li>
             </ul>

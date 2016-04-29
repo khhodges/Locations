@@ -90,12 +90,12 @@ app.activities = kendo.observable({
             schema: {
                 model: {
                     fields: {
-                        'Text': {
-                            field: 'Text',
+                        'Title': {
+                            field: 'Title',
                             defaultValue: ''
                         },
-                        'Stars': {
-                            field: 'Stars',
+                        'Text': {
+                            field: 'Text',
                             defaultValue: ''
                         },
                         'Picture': {
@@ -171,8 +171,8 @@ app.activities = kendo.observable({
                     itemModel = dataSource.getByUid(item);
                 itemModel.PictureUrl = processImage(itemModel.Picture);
 
-                if (!itemModel.Text) {
-                    itemModel.Text = String.fromCharCode(160);
+                if (!itemModel.Title) {
+                    itemModel.Title = String.fromCharCode(160);
                 }
 
                 activitiesModel.set('currentItem', null);
@@ -185,6 +185,11 @@ app.activities = kendo.observable({
         onShow: function(e) {
             // Reset the form data.
             this.set('addFormData', {
+                url: '',
+                number: '',
+                switch: '',
+                textField2: '',
+                textField3: '',
                 textField1: '',
             });
         },
@@ -193,6 +198,11 @@ app.activities = kendo.observable({
                 dataSource = activitiesModel.get('dataSource');
 
             dataSource.add({
+                Picture: addFormData.url,
+                Value: addFormData.number,
+                Active: addFormData.switch,
+                Notes: addFormData.textField2,
+                Text: addFormData.textField3,
                 Title: addFormData.textField1,
             });
 
