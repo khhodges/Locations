@@ -86,7 +86,11 @@ app.notifications = kendo.observable({
             dataSource: dataSource,
             itemClick: function(e) {
 
-                app.mobileApp.navigate('#components/notifications/details.html?uid=' + e.dataItem.uid);
+                app.mobileApp.navigate('components/activities/view.html?filter=' + encodeURIComponent(JSON.stringify({
+                    field: 'Text',
+                    value: e.dataItem.Id,
+                    operator: 'eq'
+                })));
 
             },
             detailsShow: function(e) {

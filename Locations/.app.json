@@ -176,7 +176,10 @@
           "detailHeaderFieldSource": "static",
           "detailHeaderFieldValue": "Detail",
           "addItemForm": false,
-          "editItemForm": false
+          "editItemForm": false,
+          "itemActionView": "activities",
+          "itemActionPrimaryKey": "Id",
+          "itemActionSecondaryKey": "Text"
         }
       ],
       "title": "Notifications",
