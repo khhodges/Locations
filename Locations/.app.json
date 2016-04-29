@@ -220,7 +220,23 @@
           "components": [
             {
               "type": "kendo-ui-mobile:editableListForm",
-              "components": [],
+              "components": [
+                {
+                  "type": "kendo-ui-mobile:editableListFormField",
+                  "name": "textField1",
+                  "title": "Title",
+                  "inputType": "text",
+                  "titlePosition": "left",
+                  "placeholder": "Type here ...",
+                  "dataBinding": "Title"
+                },
+                {
+                  "type": "kendo-ui-mobile:editableListFormField",
+                  "name": "subject",
+                  "title": "Long text",
+                  "inputType": "longText"
+                }
+              ],
               "name": "editableListForm16",
               "formType": "add"
             }
@@ -228,14 +244,15 @@
           "name": "activitiesModel",
           "dataProvider": "defender",
           "collection": "Activities",
-          "headerField": "UserId",
-          "iconField": true,
+          "headerField": "Text",
+          "iconField": false,
           "imageField": "Picture",
-          "subHeaderField": "Text",
+          "subHeaderField": "Stars",
           "filterField": "Text",
           "pullToRefresh": true,
           "endlessScroll": true,
-          "deleteItemButton": false,
+          "deleteItemButton": true,
+          "deleteItemConfirmation": true,
           "detailHeaderFieldSource": "static",
           "detailHeaderFieldValue": "Detail",
           "detailSubHeaderField": "Title",
@@ -243,10 +260,7 @@
           "detailImageField": "Picture",
           "addItemForm": true,
           "addScreenHeaderValue": "Create",
-          "editItemForm": false,
-          "itemActionView": "notifications",
-          "itemActionPrimaryKey": "Id",
-          "itemActionSecondaryKey": "Status"
+          "editItemForm": false
         }
       ],
       "title": "Activities",

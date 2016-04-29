@@ -87,22 +87,18 @@ app.activities = kendo.observable({
             schema: {
                 model: {
                     fields: {
-                        'UserId': {
-                            field: 'UserId',
-                            defaultValue: ''
-                        },
                         'Text': {
                             field: 'Text',
+                            defaultValue: ''
+                        },
+                        'Stars': {
+                            field: 'Stars',
                             defaultValue: ''
                         },
                         'Picture': {
                             field: 'Picture',
                             defaultValue: ''
                         },
-                    },
-                    icon: function() {
-                        var i = 'globe';
-                        return kendo.format('km-icon km-{0}', i);
                     }
                 }
             },
@@ -129,15 +125,45 @@ app.activities = kendo.observable({
             },
             itemClick: function(e) {
 
-                app.mobileApp.navigate('components/notifications/view.html?filter=' + encodeURIComponent(JSON.stringify({
-                    field: 'Status',
-                    value: e.dataItem.Id,
-                    operator: 'eq'
-                })));
+                app.mobileApp.navigate('#components/activities/details.html?uid=' + e.dataItem.uid);
 
             },
             addClick: function() {
                 app.mobileApp.navigate('#components/activities/add.html');
+            },
+            deleteClick: function() {
+                var dataSource = activitiesModel.get('dataSource'),
+                    that = this;
+
+                if (!navigator.notification) {
+                    navigator.notification = {
+                        confirm: function(message, callback) {
+                            callback(window.confirm(message) ? 1 : 2);
+                        }
+                    };
+                }
+
+                navigator.notification.confirm(
+                    "Are you sure you want to delete this item?",
+                    function(index) {
+                        //'OK' is index 1
+                        //'Cancel' - index 2
+                        if (index === 1) {
+                            dataSource.remove(that.currentItem);
+
+                            dataSource.one('sync', function() {
+                                app.mobileApp.navigate('#:back');
+                            });
+
+                            dataSource.one('error', function() {
+                                dataSource.cancelChanges();
+                            });
+
+                            dataSource.sync();
+                        }
+                    },
+                    '', ["OK", "Cancel"]
+                );
             },
             detailsShow: function(e) {
                 var item = e.view.params.uid,
@@ -145,8 +171,8 @@ app.activities = kendo.observable({
                     itemModel = dataSource.getByUid(item);
                 itemModel.PictureUrl = processImage(itemModel.Picture);
 
-                if (!itemModel.UserId) {
-                    itemModel.UserId = String.fromCharCode(160);
+                if (!itemModel.Text) {
+                    itemModel.Text = String.fromCharCode(160);
                 }
 
                 activitiesModel.set('currentItem', null);
@@ -158,13 +184,17 @@ app.activities = kendo.observable({
     parent.set('addItemViewModel', kendo.observable({
         onShow: function(e) {
             // Reset the form data.
-            this.set('addFormData', {});
+            this.set('addFormData', {
+                textField1: '',
+            });
         },
         onSaveClick: function(e) {
             var addFormData = this.get('addFormData'),
                 dataSource = activitiesModel.get('dataSource');
 
-            dataSource.add({});
+            dataSource.add({
+                Title: addFormData.textField1,
+            });
 
             dataSource.one('change', function(e) {
                 app.mobileApp.navigate('#:back');
