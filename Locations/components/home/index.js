@@ -148,13 +148,14 @@ app.home = kendo.observable({
         onShow: function(e) {
             // Reset the form data.
             this.set('addFormData', {
-                email: '',
                 html: '',
+                location: '',
                 icon: '',
-                textField: '',
-                address: '',
                 www: '',
+                email: '',
                 tel: '',
+                address: '',
+                textField: '',
                 place: '',
             });
         },
@@ -163,13 +164,14 @@ app.home = kendo.observable({
                 dataSource = homeModel.get('dataSource');
 
             dataSource.add({
-                Email: addFormData.email,
                 Html: addFormData.html,
-                Icon: addFormData.icon,
-                Description: addFormData.textField,
-                Address: addFormData.address,
+                Location: addFormData.location,
+                Image: addFormData.icon,
                 Website: addFormData.www,
+                Email: addFormData.email,
                 Phone: addFormData.tel,
+                Address: addFormData.address,
+                Description: addFormData.textField,
                 Place: addFormData.place,
             });
 

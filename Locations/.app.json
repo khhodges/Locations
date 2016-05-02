@@ -60,72 +60,81 @@
                   "name": "place",
                   "title": "Name",
                   "inputType": "text",
-                  "titlePosition": "left",
+                  "titlePosition": "top",
                   "placeholder": "Business Name",
                   "dataBinding": "Place"
-                },
-                {
-                  "type": "kendo-ui-mobile:editableListFormField",
-                  "name": "tel",
-                  "title": "Phone",
-                  "inputType": "tel",
-                  "titlePosition": "left",
-                  "placeholder": "+123 444 555 666",
-                  "dataBinding": "Phone"
-                },
-                {
-                  "type": "kendo-ui-mobile:editableListFormField",
-                  "name": "www",
-                  "title": "url",
-                  "inputType": "url",
-                  "titlePosition": "left",
-                  "placeholder": "http://www.example.com",
-                  "dataBinding": "Website"
-                },
-                {
-                  "type": "kendo-ui-mobile:editableListFormField",
-                  "name": "address",
-                  "title": "Address",
-                  "inputType": "text",
-                  "titlePosition": "left",
-                  "placeholder": "Type here ...",
-                  "dataBinding": "Address"
                 },
                 {
                   "type": "kendo-ui-mobile:editableListFormField",
                   "name": "textField",
                   "title": "Text field",
                   "inputType": "text",
-                  "titlePosition": "left",
+                  "titlePosition": "top",
                   "placeholder": "Summary  ...",
                   "dataBinding": "Description"
                 },
                 {
                   "type": "kendo-ui-mobile:editableListFormField",
-                  "name": "icon",
-                  "title": "Icon",
-                  "inputType": "url",
-                  "titlePosition": "left",
-                  "placeholder": "http://www.example.com",
-                  "dataBinding": "Icon"
+                  "name": "address",
+                  "title": "Address",
+                  "inputType": "text",
+                  "titlePosition": "top",
+                  "placeholder": "Type here ...",
+                  "dataBinding": "Address"
                 },
                 {
                   "type": "kendo-ui-mobile:editableListFormField",
-                  "name": "html",
-                  "title": "Html",
-                  "inputType": "text",
-                  "titlePosition": "left",
-                  "placeholder": "Type here ...",
-                  "dataBinding": "Html"
+                  "name": "tel",
+                  "title": "Phone",
+                  "inputType": "tel",
+                  "titlePosition": "top",
+                  "placeholder": "+123 444 555 666",
+                  "dataBinding": "Phone"
                 },
                 {
                   "type": "kendo-ui-mobile:editableListFormField",
                   "name": "email",
                   "title": "Email",
                   "inputType": "email",
-                  "titlePosition": "left",
+                  "titlePosition": "top",
                   "placeholder": "example@example.com",
                   "dataBinding": "Email"
+                },
+                {
+                  "type": "kendo-ui-mobile:editableListFormField",
+                  "name": "www",
+                  "title": "url",
+                  "inputType": "url",
+                  "titlePosition": "top",
+                  "placeholder": "http://www.example.com",
+                  "dataBinding": "Website"
+                },
+                {
+                  "type": "kendo-ui-mobile:editableListFormField",
+                  "name": "icon",
+                  "title": "Icon",
+                  "inputType": "url",
+                  "titlePosition": "top",
+                  "placeholder": "http://www.example.com",
+                  "dataBinding": "Image"
+                },
+                {
+                  "type": "kendo-ui-mobile:editableListFormField",
+                  "name": "location",
+                  "title": "Location",
+                  "inputType": "text",
+                  "titlePosition": "top",
+                  "placeholder": "Type here ...",
+                  "dataBinding": "Location"
+                },
+                {
+                  "type": "kendo-ui-mobile:editableListFormField",
+                  "name": "html",
+                  "title": "Html",
+                  "inputType": "text",
+                  "titlePosition": "top",
+                  "placeholder": "Type here ...",
+                  "dataBinding": "Html"
                 }
               ],
               "name": "editableListForm7",
