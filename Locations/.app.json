@@ -139,6 +139,20 @@
               ],
               "name": "editableListForm7",
               "formType": "add"
+            },
+            {
+              "type": "kendo-ui-mobile:editableListForm",
+              "components": [
+                {
+                  "type": "kendo-ui-mobile:editableListFormField",
+                  "name": "location",
+                  "title": "Location",
+                  "inputType": "shortText",
+                  "dataBindingOptional": "Location"
+                }
+              ],
+              "name": "editableListForm20",
+              "formType": "list"
             }
           ],
           "name": "homeModel",
@@ -292,12 +306,11 @@
           "name": "activitiesModel",
           "dataProvider": "defender",
           "collection": "Activities",
-          "headerField": "Title",
+          "headerField": "UserId",
           "iconField": false,
           "imageField": "Picture",
           "subHeaderField": "Text",
-          "filterField": "Text",
-          "group": "Text",
+          "group": "Title",
           "pullToRefresh": true,
           "endlessScroll": false,
           "deleteItemButton": true,
@@ -315,6 +328,67 @@
       "title": "Activities",
       "addToNavigation": true,
       "icon": "bookmarks"
+    },
+    {
+      "type": "kendo-ui-mobile:view",
+      "name": "comments",
+      "components": [
+        {
+          "type": "kendo-ui-mobile:editableList",
+          "listExtraFields": [],
+          "detailExtraFields": [],
+          "components": [
+            {
+              "type": "kendo-ui-mobile:editableListForm",
+              "components": [
+                {
+                  "type": "kendo-ui-mobile:editableListFormField",
+                  "name": "shortText2",
+                  "title": "Posted by",
+                  "inputType": "shortText",
+                  "dataBindingOptional": "UserId"
+                }
+              ],
+              "name": "editableListForm24",
+              "formType": "list"
+            },
+            {
+              "type": "kendo-ui-mobile:editableListForm",
+              "components": [
+                {
+                  "type": "kendo-ui-mobile:editableListFormField",
+                  "name": "comment",
+                  "title": "Comment",
+                  "inputType": "text",
+                  "titlePosition": "top",
+                  "placeholder": "Type here ...",
+                  "dataBinding": "Comment"
+                }
+              ],
+              "name": "editableListForm26",
+              "formType": "add"
+            }
+          ],
+          "name": "commentsModel",
+          "dataProvider": "defender",
+          "collection": "Comments",
+          "headerField": "Comment",
+          "subHeaderField": "Stars",
+          "pullToRefresh": true,
+          "endlessScroll": true,
+          "deleteItemButton": true,
+          "deleteItemConfirmation": true,
+          "detailHeaderFieldSource": "static",
+          "detailHeaderFieldValue": "Detail",
+          "detailSubHeaderField": "ActivityId",
+          "detailDescriptionField": "Comment",
+          "addItemForm": true,
+          "addScreenHeaderValue": "Create",
+          "editItemForm": false
+        }
+      ],
+      "title": "Comments",
+      "addToNavigation": false
     }
   ],
   "dataProviders": [

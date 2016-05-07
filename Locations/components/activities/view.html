@@ -16,11 +16,6 @@
     </header>
 
 
-    <form class="km-filter-form custom-filter">
-        <div class="km-filter-wrap">
-            <input type="serach" placeholder="Search..." data-bind="{events:{keyup: activitiesModel.searchChange}}">
-        </div>
-    </form>
     <ul data-role="listview" data-auto-bind="false" data-style="inset" data-template="activitiesModelTemplate" data-bind="{ source: activitiesModel.dataSource, events: {click: activitiesModel.itemClick} }" data-pull-to-refresh="true" data-endless-scroll="false">
     </ul>
     <!-- START_CUSTOM_CODE_activitiesModel -->
@@ -30,7 +25,7 @@
     <script type="text/x-kendo-template" id="activitiesModelTemplate">
         <div class="image-with-text">
             <img src="#: data['PictureUrl'] #" width="30%" height="30%">
-            <h3>#: data['Title'] #</h3>
+            <h3>#: data['UserId'] #</h3>
             <p>#: data['Text'] #</p>
         </div>
     </script>

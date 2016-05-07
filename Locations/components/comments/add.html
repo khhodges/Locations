@@ -1,0 +1,29 @@
+<div data-role="view" data-title="Add" data-model="app.comments.addItemViewModel" data-bind="events: { show: onShow }" id="commentsModelAddItemView">
+    <header data-role="header">
+        <div data-role="navbar" class="header-text">
+            <span style="overflow: hidden; white-space: nowrap; text-overflow: ellipsis; text-align: center; display: block; margin-left: 70px; margin-right: 70px;" data-role="view-title"></span>
+            <a data-role="backbutton" data-align="left">Cancel</a>
+            <a data-role="button" data-align="right" data-bind="events: { click: onSaveClick }">Save</a>
+        </div>
+    </header>
+    <!-- START_CUSTOM_CODE_commentsModel -->
+    <!-- END_CUSTOM_CODE_commentsModel -->
+    <div id="editableListForm26" class="form-view">
+        <form>
+            <ul class="form-content" data-role="listview" data-style="inset">
+                <li class="form-content-item">
+
+                    <label class="km-label-above">
+
+                        <span>Comment</span>
+
+                        <input id="comment" data-bind="value: addFormData.comment" placeholder="Type here ..." type="text">
+                    </label>
+
+                </li>
+            </ul>
+        </form>
+        <!-- START_CUSTOM_CODE_editableListForm26 -->
+        <!-- END_CUSTOM_CODE_editableListForm26 -->
+    </div>
+</div>
