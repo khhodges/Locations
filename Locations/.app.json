@@ -347,6 +347,12 @@
                   "title": "Posted by",
                   "inputType": "shortText",
                   "dataBindingOptional": "UserId"
+                },
+                {
+                  "type": "kendo-ui-mobile:editableListFormField",
+                  "name": "shortText3",
+                  "title": "Short text",
+                  "inputType": "shortText"
                 }
               ],
               "name": "editableListForm24",
@@ -388,7 +394,8 @@
         }
       ],
       "title": "Comments",
-      "addToNavigation": false
+      "addToNavigation": true,
+      "icon": "edit"
     }
   ],
   "dataProviders": [
